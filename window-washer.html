@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Autonomous Window Cleaning Robot | Neha Nepal</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .page-hero {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 70px 24px 35px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      color: var(--blue);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 0.85rem;
+      margin-bottom: 12px;
+    }
+
+    .page-hero h1 {
+      font-size: clamp(2.6rem, 6vw, 4.5rem);
+      color: var(--navy);
+      margin: 0 0 18px;
+      line-height: 1;
+    }
+
+    .page-hero p {
+      max-width: 760px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 20px 24px 70px;
+    }
+
+    .case-section {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 34px;
+      margin-bottom: 28px;
+      box-shadow: 0 8px 24px rgba(0, 52, 89, 0.07);
+    }
+
+    .case-section h2 {
+      color: var(--navy);
+      margin-top: 0;
+    }
+
+    .case-section p,
+    .case-section li {
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .case-image {
+      width: 100%;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      margin: 20px 0;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 20px;
+    }
+
+    .timeline-item {
+      border-left: 4px solid var(--blue);
+      padding-left: 20px;
+    }
+
+    .timeline-item strong {
+      display: block;
+      color: var(--navy);
+      margin-bottom: 6px;
+      font-size: 1.1rem;
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    @media(max-width:850px) {
+      .two-column {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="nav-container">
+      <a class="logo" href="index.html">NEHA NEPAL</a>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="skills.html">Technical Skills</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="eyebrow">Project Case Study</div>
+    <h1>Autonomous Window Cleaning Robot</h1>
+    <p>
+      A step-by-step look at the design process behind a residential autonomous window-cleaning system,
+      from initial problem definition to prototype testing and final presentation.
+    </p>
+  </section>
+
+  <main>
+    <section class="case-section">
+      <h2>Project Overview</h2>
+      <p>
+        This project focused on designing a cost-effective automated window-cleaning system for residential use.
+        The final system used a gantry-style motion platform, belt and pulley mechanism, stepper motor, Arduino
+        control, limit switches, a squeegee system, and integrated water delivery.
+      </p>
+
+      <img class="case-image" src="junior design sketch.png" alt="Window cleaning robot top and side view sketch">
+    </section>
+
+    <section class="case-section">
+      <h2>Design Process</h2>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <strong>1. Define the Problem</strong>
+          The team first identified the need for a system that could clean a window surface with reduced manual labor.
+          The prototype needed to move across the window, apply pressure through a squeegee, and eventually integrate
+          water delivery.
+        </div>
+
+        <div class="timeline-item">
+          <strong>2. Ideate Motion Concepts</strong>
+          Early concepts focused on a squeegee mounted to a moving platform. The system used a stepper motor,
+          belt, pulley, and track to move the platform along the x-axis.
+        </div>
+
+        <div class="timeline-item">
+          <strong>3. Prototype 1: Cleaning Feasibility</strong>
+          The first prototype tested whether a 3D-printed part and squeegee could remove debris from a mirror.
+          Different weights were tested, with 543 grams producing the best cleaning performance.
+        </div>
+
+        <div class="timeline-item">
+          <strong>4. Prototype 2: Linear Motion System</strong>
+          The second prototype focused on x-direction movement using a stepper motor, pulley, belt, track,
+          and Arduino controller. Torque calculations were used to confirm that the motor could move the required load.
+        </div>
+
+        <div class="timeline-item">
+          <strong>5. Prototype 3: Mounting and Frame Development</strong>
+          The team developed a homemade window frame, mounted the gantry system, and wrote Arduino code for motion.
+          This prototype exposed manufacturing and assembly issues, including frame sizing, drilling constraints,
+          and delayed electrical components.
+        </div>
+
+        <div class="timeline-item">
+          <strong>6. Prototype 4: Water Delivery and Squeegee Force</strong>
+          The design expanded to include water delivery, a full-length squeegee, and an applied force mechanism.
+          I worked on planning the water system, including fittings, tubing, nozzle behavior, and head-loss calculations.
+        </div>
+
+        <div class="timeline-item">
+          <strong>7. Prototype 5: Integrated Final Prototype</strong>
+          The final prototype combined the gantry, tubing, squeegee, window frame, electronics, and water delivery
+          into one working system.
+        </div>
+
+        <div class="timeline-item">
+          <strong>8. Final Presentation</strong>
+          The final design cleaned the window back and forth, moved smoothly along the V-slot, changed direction reliably,
+          and delivered enough water to clean the surface with minimal friction.
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <h2>Engineering Calculations</h2>
+
+      <div class="two-column">
+        <div>
+          <h3>Motor Motion</h3>
+          <p>
+            The team calculated the number of motor rotations required to move the platform across the full window length.
+            For a 500 mm travel distance and a 16 mm pulley diameter, the system required approximately 9.95 rotations.
+          </p>
+        </div>
+
+        <div>
+          <h3>Fluid Delivery</h3>
+          <p>
+            The water system required estimating flow behavior through tubing and nozzle geometry. Head loss and spray
+            velocity were considered to ensure enough water reached the window surface before the squeegee passed over it.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <h2>My Contributions</h2>
+      <ul>
+        <li>Led planning for later prototype iterations and water delivery integration.</li>
+        <li>Calculated flow requirements, nozzle behavior, and tubing head loss.</li>
+        <li>Helped connect the water delivery system to the gantry and cleaning motion.</li>
+        <li>Supported prototype iteration, design tradeoffs, and final presentation preparation.</li>
+      </ul>
+    </section>
+
+    <section class="case-section">
+      <h2>What We Learned</h2>
+      <p>
+        The project required constant iteration. Parts arrived late, some 3D prints failed, and the final design
+        changed significantly from the original concept. The biggest lesson was learning to plan for failure,
+        make fast engineering decisions, and adapt the design without losing sight of the core function.
+      </p>
+    </section>
+
+    <section class="case-section">
+      <h2>Result</h2>
+      <p>
+        The final prototype successfully demonstrated an automated cleaning motion with smooth gantry movement,
+        water delivery, squeegee contact, and reliable direction changes.
+      </p>
+
+      <a class="button" href="projects.html">← Back to Projects</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Neha Nepal. All rights reserved.</p>
+  </footer>
+</body>
+</html>
