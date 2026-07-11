@@ -147,21 +147,61 @@
       <div class="timeline">
         <div class="timeline-item">
           <strong>1. Define the Problem</strong>
-          The team first identified the need for a system that could clean a window surface with reduced manual labor.
-          The prototype needed to move across the window, apply pressure through a squeegee, and eventually integrate
-          water delivery.
+         <p>
+The team was tasked with designing a solution to a real-world problem while working within a strict $150 budget. After researching existing automated window-cleaning systems, we found that most commercial solutions were designed for skyscrapers and large commercial buildings. Rather than competing with those systems, we shifted our focus toward residential homeowners, where window cleaning is often overlooked due to the cost and inconvenience of hiring professional services. In our area, residential window cleaning typically costs between $150 and $250 per visit.
+</p>
+<p>
+Our objective was to develop a low-cost autonomous window-cleaning system that could be permanently installed on a residential window, reducing the need for repeated professional cleaning. The system needed to travel across the window, apply sufficient pressure through a squeegee to remove debris, and eventually integrate a water delivery system to improve cleaning performance. Throughout the project, we balanced performance, manufacturability, and cost while iteratively refining the design through multiple prototypes.
+</p> 
         </div>
 
         <div class="timeline-item">
           <strong>2. Ideate Motion Concepts</strong>
-          Early concepts focused on a squeegee mounted to a moving platform. The system used a stepper motor,
-          belt, pulley, and track to move the platform along the x-axis.
+        <p>
+Early brainstorming explored several approaches for moving the cleaning mechanism across the window. Concepts included a CNC-style gantry system, suspended rope-and-sponge mechanisms, and other automated cleaning methods. After evaluating each concept for feasibility, complexity, and cost, we selected a belt-driven linear motion system powered by a stepper motor. This approach provided precise positioning while remaining within our $150 budget.
+</p>
+
+<p>
+Once the motion system was selected, we identified the major engineering challenges that would guide the remainder of the project. The following design requirements became the foundation for each subsequent prototype:
+</p>
+
+<ul>
+    <li><strong>Linear Motion:</strong> Design a belt-driven gantry system capable of moving smoothly and reliably across the full width of the window.</li>
+
+    <li><strong>Complete Surface Coverage:</strong> Because the platform only traveled along one axis, the squeegee needed to span the entire height of the window to clean the surface in a single pass.</li>
+
+    <li><strong>Water Delivery:</strong> Integrate a system capable of dispensing water immediately before the squeegee passed over the glass.</li>
+
+    <li><strong>Consistent Contact Force:</strong> Maintain sufficient and uniform pressure between the squeegee and the window to effectively remove debris.</li>
+
+    <li><strong>Motor Selection:</strong> Ensure the selected stepper motor could provide enough torque to move the cleaning assembly while maintaining smooth motion.</li>
+
+    <li><strong>Structural Design:</strong> Develop a lightweight yet rigid frame that supported the motion system while remaining within budget.</li>
+
+    <li><strong>Low-Cost Manufacturing:</strong> Keep the complete prototype under the project's $150 budget through careful component selection and 3D-printed parts.</li>
+
+    <li><strong>Reliability:</strong> Create a system capable of repeating the cleaning cycle consistently using Arduino-based motor control and limit switches.</li>
+</ul>
         </div>
+        Below is the first sketch of the expected prototype.
+        <div class="prototype-image">
+    <img src="prototype1.jpg" alt="Prototype 1">
+</div>
 
         <div class="timeline-item">
           <strong>3. Prototype 1: Cleaning Feasibility</strong>
           The first prototype tested whether a 3D-printed part and squeegee could remove debris from a mirror.
-          Different weights were tested, with 543 grams producing the best cleaning performance.
+          Different weights were tested to determine how much weight was required to completely clean the mirror.
+          
+          <div class="prototype-files">
+    <a class="button secondary"
+       href="Prototype1Presentation.pdf"
+       target="_blank">
+       View Prototype Presentation
+    </a>
+</div>
+          with 543 grams producing the best cleaning performance.
+          We were able to also validate our squeegee method.
         </div>
 
         <div class="timeline-item">
