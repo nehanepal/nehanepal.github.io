@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,10 +9,12 @@
   <link rel="stylesheet" href="styles.css">
 
   <style>
+    /* PAGE HERO */
+
     .page-hero {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 70px 24px 35px;
+      padding: 70px 24px 40px;
       text-align: center;
     }
 
@@ -25,10 +28,10 @@
     }
 
     .page-hero h1 {
-      font-size: clamp(2.6rem, 6vw, 4.5rem);
       color: var(--navy);
-      margin: 0 0 18px;
+      font-size: clamp(2.6rem, 6vw, 4.5rem);
       line-height: 1;
+      margin: 0 0 18px;
     }
 
     .page-hero p {
@@ -36,12 +39,15 @@
       margin: 0 auto;
       color: var(--muted);
       font-size: 1.08rem;
+      line-height: 1.7;
     }
+
+    /* PAGE LAYOUT */
 
     main {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 20px 24px 70px;
+      padding: 10px 24px 70px;
     }
 
     .case-section {
@@ -51,9 +57,16 @@
       padding: 34px;
       margin-bottom: 28px;
       box-shadow: 0 8px 24px rgba(0, 52, 89, 0.07);
+      overflow: hidden;
     }
 
     .case-section h2 {
+      color: var(--navy);
+      font-size: 1.85rem;
+      margin: 0 0 18px;
+    }
+
+    .case-section h3 {
       color: var(--navy);
       margin-top: 0;
     }
@@ -61,42 +74,261 @@
     .case-section p,
     .case-section li {
       color: var(--muted);
-      line-height: 1.7;
+      line-height: 1.75;
     }
 
-    .case-image {
-      width: 100%;
-      border-radius: 18px;
-      border: 1px solid var(--border);
-      margin: 20px 0;
+    .case-section ul {
+      padding-left: 22px;
     }
 
-    .timeline {
+    .case-section li {
+      margin-bottom: 10px;
+    }
+
+    /* QUICK FACTS */
+
+    .quick-facts {
       display: grid;
-      gap: 20px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-top: 24px;
     }
 
-    .timeline-item {
-      border-left: 4px solid var(--blue);
-      padding-left: 20px;
+    .fact {
+      background: #f7fbff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 16px;
     }
 
-    .timeline-item strong {
+    .fact strong {
       display: block;
       color: var(--navy);
-      margin-bottom: 6px;
-      font-size: 1.1rem;
+      margin-bottom: 4px;
+    }
+
+    .fact span {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    /* DESIGN REQUIREMENTS */
+
+    .requirements-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .requirement {
+      background: #f7fbff;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 20px;
+    }
+
+    .requirement h3 {
+      font-size: 1.05rem;
+      margin-bottom: 8px;
+    }
+
+    .requirement p {
+      margin: 0;
+      font-size: 0.96rem;
+    }
+
+    /* IMAGES */
+
+    .image-block {
+      width: 100%;
+      margin: 28px auto 8px;
+      text-align: center;
+    }
+
+    .image-block img {
+      display: block;
+      width: 100%;
+      max-width: 900px;
+      height: auto;
+      margin: 0 auto;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 8px 20px rgba(0, 52, 89, 0.08);
+      object-fit: contain;
+    }
+
+    .image-caption {
+      max-width: 850px;
+      margin: 12px auto 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-style: italic;
+    }
+
+    .image-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .gallery-item {
+      background: #f7fbff;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 14px;
+    }
+
+    .gallery-item img {
+      display: block;
+      width: 100%;
+      height: 280px;
+      object-fit: contain;
+      border-radius: 12px;
+      background: white;
+    }
+
+    .gallery-item p {
+      margin: 12px 4px 2px;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    /* PROTOTYPE SECTIONS */
+
+    .prototype {
+      border-left: 5px solid var(--blue);
+    }
+
+    .prototype-label {
+      color: var(--blue);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .prototype-header {
+      margin-bottom: 22px;
+    }
+
+    .prototype-header h2 {
+      margin-bottom: 8px;
+    }
+
+    .prototype-subtitle {
+      color: var(--blue);
+      font-weight: 700;
+      margin: 0;
     }
 
     .two-column {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 24px;
+      gap: 22px;
+      margin-top: 22px;
     }
 
-    @media(max-width:850px) {
-      .two-column {
+    .content-box {
+      background: #f7fbff;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 22px;
+    }
+
+    .content-box h3 {
+      margin-bottom: 10px;
+    }
+
+    .content-box p:last-child,
+    .content-box ul:last-child {
+      margin-bottom: 0;
+    }
+
+    /* PRESENTATION / FILE BUTTONS */
+
+    .file-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    /* PLACEHOLDER BOXES */
+
+    .placeholder {
+      border: 2px dashed var(--border);
+      border-radius: 18px;
+      padding: 24px;
+      margin-top: 22px;
+      background: #fbfdff;
+    }
+
+    .placeholder strong {
+      display: block;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .placeholder p {
+      margin: 0;
+      font-size: 0.94rem;
+    }
+
+    /* FINAL RESULTS */
+
+    .result-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 22px;
+    }
+
+    .result {
+      background: #f7fbff;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 22px;
+      text-align: center;
+    }
+
+    .result strong {
+      display: block;
+      color: var(--navy);
+      font-size: 1.5rem;
+      margin-bottom: 6px;
+    }
+
+    .result span {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 850px) {
+      .quick-facts,
+      .requirements-grid,
+      .two-column,
+      .image-gallery,
+      .result-grid {
         grid-template-columns: 1fr;
+      }
+
+      .gallery-item img {
+        height: auto;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .case-section {
+        padding: 24px;
+      }
+
+      .page-hero {
+        padding-top: 50px;
       }
     }
   </style>
@@ -122,170 +354,657 @@
 
   <section class="page-hero">
     <div class="eyebrow">Project Case Study</div>
+
     <h1>Autonomous Window Cleaning Robot</h1>
+
     <p>
-      A step-by-step look at the design process behind a residential autonomous window-cleaning system,
-      from initial problem definition to prototype testing and final presentation.
+      A step-by-step look at the design and development of a low-cost residential
+      window-cleaning system, from problem definition and concept selection through
+      five prototypes, testing, iteration, and final presentation.
     </p>
   </section>
 
   <main>
+    <!-- PROJECT OVERVIEW -->
+
     <section class="case-section">
       <h2>Project Overview</h2>
+
       <p>
-        This project focused on designing a cost-effective automated window-cleaning system for residential use.
-        The final system used a gantry-style motion platform, belt and pulley mechanism, stepper motor, Arduino
-        control, limit switches, a squeegee system, and integrated water delivery.
+        The team was tasked with designing a solution to a real-world problem while
+        working within a strict <strong>$150 budget</strong>. After researching existing
+        automated window-cleaning systems, we found that most commercial solutions were
+        designed for skyscrapers and large commercial buildings.
       </p>
 
-      <img class="case-image" src="junior design sketch.png" alt="Window cleaning robot top and side view sketch">
-    </section>
+      <p>
+        Rather than competing with those systems, we shifted our focus toward residential
+        homeowners, where window cleaning is often overlooked because of the cost and
+        inconvenience of hiring professional services. In our area, residential window
+        cleaning typically cost between <strong>$150 and $250 per visit</strong>.
+      </p>
 
-    <section class="case-section">
-      <h2>Design Process</h2>
+      <p>
+        Our objective was to develop a low-cost autonomous window-cleaning system that
+        could be permanently installed on a residential window, reducing the need for
+        repeated professional cleaning. The system needed to travel across the window,
+        apply sufficient pressure through a squeegee to remove debris, and integrate a
+        water-delivery system to improve cleaning performance.
+      </p>
 
-      <div class="timeline">
-        <div class="timeline-item">
-          <strong>1. Define the Problem</strong>
-         <p>
-The team was tasked with designing a solution to a real-world problem while working within a strict $150 budget. After researching existing automated window-cleaning systems, we found that most commercial solutions were designed for skyscrapers and large commercial buildings. Rather than competing with those systems, we shifted our focus toward residential homeowners, where window cleaning is often overlooked due to the cost and inconvenience of hiring professional services. In our area, residential window cleaning typically costs between $150 and $250 per visit.
-</p>
-<p>
-Our objective was to develop a low-cost autonomous window-cleaning system that could be permanently installed on a residential window, reducing the need for repeated professional cleaning. The system needed to travel across the window, apply sufficient pressure through a squeegee to remove debris, and eventually integrate a water delivery system to improve cleaning performance. Throughout the project, we balanced performance, manufacturability, and cost while iteratively refining the design through multiple prototypes.
-</p> 
+      <div class="quick-facts">
+        <div class="fact">
+          <strong>Budget</strong>
+          <span>$150 maximum</span>
         </div>
 
-        <div class="timeline-item">
-          <strong>2. Ideate Motion Concepts</strong>
-        <p>
-Early brainstorming explored several approaches for moving the cleaning mechanism across the window. Concepts included a CNC-style gantry system, suspended rope-and-sponge mechanisms, and other automated cleaning methods. After evaluating each concept for feasibility, complexity, and cost, we selected a belt-driven linear motion system powered by a stepper motor. This approach provided precise positioning while remaining within our $150 budget.
-</p>
-
-<p>
-Once the motion system was selected, we identified the major engineering challenges that would guide the remainder of the project. The following design requirements became the foundation for each subsequent prototype:
-</p>
-
-<ul>
-    <li><strong>Linear Motion:</strong> Design a belt-driven gantry system capable of moving smoothly and reliably across the full width of the window.</li>
-
-    <li><strong>Complete Surface Coverage:</strong> Because the platform only traveled along one axis, the squeegee needed to span the entire height of the window to clean the surface in a single pass.</li>
-
-    <li><strong>Water Delivery:</strong> Integrate a system capable of dispensing water immediately before the squeegee passed over the glass.</li>
-
-    <li><strong>Consistent Contact Force:</strong> Maintain sufficient and uniform pressure between the squeegee and the window to effectively remove debris.</li>
-
-    <li><strong>Motor Selection:</strong> Ensure the selected stepper motor could provide enough torque to move the cleaning assembly while maintaining smooth motion.</li>
-
-    <li><strong>Structural Design:</strong> Develop a lightweight yet rigid frame that supported the motion system while remaining within budget.</li>
-
-    <li><strong>Low-Cost Manufacturing:</strong> Keep the complete prototype under the project's $150 budget through careful component selection and 3D-printed parts.</li>
-
-    <li><strong>Reliability:</strong> Create a system capable of repeating the cleaning cycle consistently using Arduino-based motor control and limit switches.</li>
-</ul>
-        </div>
-        Below is the first sketch of the expected prototype.
-        <div class="prototype-image">
-    <img src="jd pic.png" alt="Prototype 1">
-</div>
-
-        <div class="timeline-item">
-          <strong>3. Prototype 1: Cleaning Feasibility</strong>
-          The first prototype tested whether a 3D-printed part and squeegee could remove debris from a mirror.
-          Different weights were tested to determine how much weight was required to completely clean the mirror.
-          
-          <div class="prototype-files">
-    <a class="button secondary"
-       href="Prototype1Presentation.pdf"
-       target="_blank">
-       View Prototype Presentation
-    </a>
-</div>
-          with 543 grams producing the best cleaning performance.
-          We were able to also validate our squeegee method.
+        <div class="fact">
+          <strong>Team</strong>
+          <span>4 engineers</span>
         </div>
 
-        <div class="timeline-item">
-          <strong>4. Prototype 2: Linear Motion System</strong>
-          The second prototype focused on x-direction movement using a stepper motor, pulley, belt, track,
-          and Arduino controller. Torque calculations were used to confirm that the motor could move the required load.
+        <div class="fact">
+          <strong>Development</strong>
+          <span>5 prototype iterations</span>
         </div>
 
-        <div class="timeline-item">
-          <strong>5. Prototype 3: Mounting and Frame Development</strong>
-          The team developed a homemade window frame, mounted the gantry system, and wrote Arduino code for motion.
-          This prototype exposed manufacturing and assembly issues, including frame sizing, drilling constraints,
-          and delayed electrical components.
-        </div>
-
-        <div class="timeline-item">
-          <strong>6. Prototype 4: Water Delivery and Squeegee Force</strong>
-          The design expanded to include water delivery, a full-length squeegee, and an applied force mechanism.
-          I worked on planning the water system, including fittings, tubing, nozzle behavior, and head-loss calculations.
-        </div>
-
-        <div class="timeline-item">
-          <strong>7. Prototype 5: Integrated Final Prototype</strong>
-          The final prototype combined the gantry, tubing, squeegee, window frame, electronics, and water delivery
-          into one working system.
-        </div>
-
-        <div class="timeline-item">
-          <strong>8. Final Presentation</strong>
-          The final design cleaned the window back and forth, moved smoothly along the V-slot, changed direction reliably,
-          and delivered enough water to clean the surface with minimal friction.
+        <div class="fact">
+          <strong>Final Output</strong>
+          <span>Working physical prototype</span>
         </div>
       </div>
     </section>
 
+    <!-- IDEATION -->
+
     <section class="case-section">
-      <h2>Engineering Calculations</h2>
+      <h2>Concept Development</h2>
+
+      <p>
+        Early brainstorming explored several approaches for moving the cleaning mechanism
+        across the window. Concepts included a CNC-style gantry system, suspended
+        rope-and-sponge mechanisms, and other automated cleaning methods.
+      </p>
+
+      <p>
+        After evaluating each concept for feasibility, complexity, reliability, and cost,
+        we selected a belt-driven linear-motion system powered by a stepper motor. This
+        approach provided controlled positioning while remaining feasible within the
+        project budget.
+      </p>
+
+      <h3>Design Requirements</h3>
+
+      <p>
+        Once the motion system was selected, the following requirements guided every
+        subsequent prototype:
+      </p>
+
+      <div class="requirements-grid">
+        <div class="requirement">
+          <h3>Linear Motion</h3>
+          <p>
+            Develop a belt-driven gantry capable of moving smoothly and reliably across
+            the full width of the window.
+          </p>
+        </div>
+
+        <div class="requirement">
+          <h3>Complete Surface Coverage</h3>
+          <p>
+            Because the platform moved along one axis, the squeegee needed to span the
+            full height of the window.
+          </p>
+        </div>
+
+        <div class="requirement">
+          <h3>Water Delivery</h3>
+          <p>
+            Dispense water onto the glass immediately before the squeegee passed over
+            the cleaning area.
+          </p>
+        </div>
+
+        <div class="requirement">
+          <h3>Consistent Contact Force</h3>
+          <p>
+            Maintain sufficient and uniform pressure between the squeegee and the glass
+            to remove debris.
+          </p>
+        </div>
+
+        <div class="requirement">
+          <h3>Motor Capacity</h3>
+          <p>
+            Select a stepper motor with enough torque to move the complete cleaning
+            assembly without stalling.
+          </p>
+        </div>
+
+        <div class="requirement">
+          <h3>Structural Stability</h3>
+          <p>
+            Create a lightweight but rigid frame capable of supporting the motion,
+            cleaning, and water-delivery systems.
+          </p>
+        </div>
+
+        <div class="requirement">
+          <h3>Low-Cost Manufacturing</h3>
+          <p>
+            Keep the entire prototype below $150 through careful sourcing and the use
+            of custom 3D-printed components.
+          </p>
+        </div>
+
+        <div class="requirement">
+          <h3>Repeatable Operation</h3>
+          <p>
+            Use Arduino-based motor control and limit switches to repeat the cleaning
+            cycle consistently.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- INITIAL SKETCH -->
+
+    <section class="case-section">
+      <h2>Initial System Concept</h2>
+
+      <p>
+        The first system sketch established the basic relationship between the stepper
+        motor, motor driver, Arduino, belt, pulley, tracks, and moving platform. This
+        layout became the foundation for the linear-motion prototypes that followed.
+      </p>
+
+      <div class="image-block">
+        <!-- Replace the filename below if your image uses a different name. -->
+        <img
+          src="junior design sketch.png"
+          alt="Initial top and side view sketch of the autonomous window cleaning system"
+        >
+
+        <p class="image-caption">
+          Initial top and side views showing the proposed motor, belt, pulley, track,
+          electronics, and moving-platform arrangement.
+        </p>
+      </div>
+    </section>
+
+    <!-- PROTOTYPE 1 -->
+
+    <section class="case-section prototype" id="prototype-1">
+      <div class="prototype-header">
+        <div class="prototype-label">Prototype 01</div>
+        <h2>Cleaning Feasibility</h2>
+        <p class="prototype-subtitle">
+          Validating the squeegee concept and required contact force
+        </p>
+      </div>
+
+      <h3>Objective</h3>
+
+      <p>
+        The first prototype was designed to validate the cleaning concept before the team
+        invested time and budget in a complete automated system. We tested whether a
+        3D-printed cleaning assembly paired with a rubber squeegee could effectively remove
+        debris from a mirror.
+      </p>
+
+      <h3>Testing Method</h3>
+
+      <p>
+        Different weights were applied to the cleaning assembly to determine how much
+        contact force was required to completely clean the mirror. The weight was increased
+        incrementally, and the surface was evaluated after each cleaning pass.
+      </p>
 
       <div class="two-column">
-        <div>
-          <h3>Motor Motion</h3>
-          <p>
-            The team calculated the number of motor rotations required to move the platform across the full window length.
-            For a 500 mm travel distance and a 16 mm pulley diameter, the system required approximately 9.95 rotations.
-          </p>
+        <div class="content-box">
+          <h3>Key Findings</h3>
+
+          <ul>
+            <li>Validated the use of a rubber squeegee as the primary cleaning method.</li>
+            <li>
+              Found that approximately <strong>543 grams</strong> of applied weight produced
+              the strongest cleaning performance.
+            </li>
+            <li>
+              Confirmed that maintaining contact force would be a major requirement for
+              future prototypes.
+            </li>
+          </ul>
         </div>
 
-        <div>
-          <h3>Fluid Delivery</h3>
-          <p>
-            The water system required estimating flow behavior through tubing and nozzle geometry. Head loss and spray
-            velocity were considered to ensure enough water reached the window surface before the squeegee passed over it.
-          </p>
+        <div class="content-box">
+          <h3>How It Informed Prototype 2</h3>
+
+          <ul>
+            <li>The motor needed to move the cleaning assembly while overcoming friction.</li>
+            <li>The structure needed to support the required contact force.</li>
+            <li>The motion mechanism needed to keep the squeegee stable during travel.</li>
+          </ul>
         </div>
       </div>
+
+      <div class="image-gallery">
+        <div class="gallery-item">
+          <!-- Replace this filename with your Prototype 1 image. -->
+          <img
+            src="prototype-1-cleaning-test.jpg"
+            alt="Prototype 1 squeegee cleaning test"
+          >
+
+          <p>Prototype 1 cleaning-force test.</p>
+        </div>
+
+        <div class="gallery-item">
+          <!-- Optional second image. Replace or delete this gallery item. -->
+          <img
+            src="prototype-1-results.jpg"
+            alt="Mirror surface after Prototype 1 cleaning test"
+          >
+
+          <p>Mirror surface after the cleaning test.</p>
+        </div>
+      </div>
+
+      <div class="file-links">
+        <!-- Rename the href to match the exact PDF filename in GitHub. -->
+        <a
+          class="button"
+          href="Prototype 1.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View Prototype 1 Presentation
+        </a>
+      </div>
     </section>
+
+    <!-- PROTOTYPE 2 -->
+
+    <section class="case-section prototype" id="prototype-2">
+      <div class="prototype-header">
+        <div class="prototype-label">Prototype 02</div>
+        <h2>Linear Motion System</h2>
+        <p class="prototype-subtitle">
+          Developing the motor, belt, pulley, and track architecture
+        </p>
+      </div>
+
+      <div class="placeholder">
+        <strong>Fill in: Prototype 2 Objective</strong>
+        <p>
+          Explain what this prototype was intended to prove. For example: moving the
+          platform along the x-axis, selecting the motor, and validating the belt and
+          pulley system.
+        </p>
+      </div>
+
+      <div class="two-column">
+        <div class="content-box">
+          <h3>Engineering Analysis</h3>
+
+          <p>
+            The selected stepper motor had a maximum torque of 0.1467 N·m. Using the
+            shaft radius, the team estimated the available linear force and compared it
+            with the force required to move the squeegee assembly.
+          </p>
+
+          <div class="placeholder">
+            <strong>Fill in: Calculation Result</strong>
+            <p>
+              Add the final motor-force calculation and explain how it confirmed that
+              the motor could move the expected assembly mass.
+            </p>
+          </div>
+        </div>
+
+        <div class="content-box">
+          <h3>Testing and Results</h3>
+
+          <div class="placeholder">
+            <strong>Fill in: What worked and what failed?</strong>
+            <p>
+              Describe the actual test, how smoothly the gantry moved, coding or wiring
+              problems, and what had to change before Prototype 3.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="image-gallery">
+        <div class="gallery-item">
+          <img src="prototype-2-photo.jpg" alt="Prototype 2 motion system">
+          <p>Replace with a Prototype 2 image.</p>
+        </div>
+
+        <div class="gallery-item">
+          <img src="prototype-2-calculation.jpg" alt="Prototype 2 motor calculation">
+          <p>Replace with a motor calculation or motion-system image.</p>
+        </div>
+      </div>
+
+      <div class="file-links">
+        <a
+          class="button"
+          href="Prototype 2.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View Prototype 2 Presentation
+        </a>
+      </div>
+    </section>
+
+    <!-- PROTOTYPE 3 -->
+
+    <section class="case-section prototype" id="prototype-3">
+      <div class="prototype-header">
+        <div class="prototype-label">Prototype 03</div>
+        <h2>Frame, Mounting, and Controls</h2>
+        <p class="prototype-subtitle">
+          Building the window structure and integrating the gantry
+        </p>
+      </div>
+
+      <div class="placeholder">
+        <strong>Fill in: Prototype 3 Story</strong>
+        <p>
+          Describe the homemade window, mounting components, Arduino code, window-frame
+          fabrication, and the problems caused by print failures, tooling limitations,
+          frame sizing, and delayed components.
+        </p>
+      </div>
+
+      <div class="two-column">
+        <div class="content-box">
+          <h3>Successes</h3>
+          <ul>
+            <li>Developed working Arduino code for full-length travel.</li>
+            <li>Designed window clips and T-slot mounting components.</li>
+            <li>Sourced cost-effective frame and power-supply components.</li>
+          </ul>
+        </div>
+
+        <div class="content-box">
+          <h3>Lessons Learned</h3>
+          <div class="placeholder">
+            <strong>Fill in: Prototype 3 shortcomings</strong>
+            <p>
+              Explain why the prototype could not be fully assembled and how the team
+              responded by reprinting fasteners and revising the frame hardware.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="image-gallery">
+        <div class="gallery-item">
+          <img src="prototype-3-frame.jpg" alt="Prototype 3 window frame">
+          <p>Replace with the window-frame image.</p>
+        </div>
+
+        <div class="gallery-item">
+          <img src="prototype-3-mounts.jpg" alt="Prototype 3 mounting components">
+          <p>Replace with CAD or mounting-component images.</p>
+        </div>
+      </div>
+
+      <div class="file-links">
+        <a
+          class="button"
+          href="Prototype 3.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View Prototype 3 Presentation
+        </a>
+      </div>
+    </section>
+
+    <!-- PROTOTYPE 4 -->
+
+    <section class="case-section prototype" id="prototype-4">
+      <div class="prototype-header">
+        <div class="prototype-label">Prototype 04</div>
+        <h2>Water Delivery and Squeegee Pressure</h2>
+        <p class="prototype-subtitle">
+          Integrating the fluid system and testing competing squeegee-arm concepts
+        </p>
+      </div>
+
+      <p>
+        Prototype 4 introduced the water-delivery system, a full-height squeegee, and a
+        mechanism for maintaining contact force against the glass. Two squeegee concepts
+        were developed: a bridge-style assembly and a spring-loaded hinge-style assembly.
+      </p>
+
+      <div class="two-column">
+        <div class="content-box">
+          <h3>My Fluid-System Work</h3>
+          <ul>
+            <li>Researched tubing, fittings, adapters, and nozzle options.</li>
+            <li>Calculated flow conditions and estimated tubing head loss.</li>
+            <li>Planned how the water system would attach to the moving gantry.</li>
+            <li>Considered spray coverage, hose routing, and system pressure.</li>
+          </ul>
+        </div>
+
+        <div class="content-box">
+          <h3>Prototype Challenges</h3>
+          <ul>
+            <li>Water-system components did not arrive on schedule.</li>
+            <li>One long 3D print did not fit correctly.</li>
+            <li>Makerspace time limits increased the turnaround time for reprints.</li>
+            <li>The tubing and squeegee systems still needed to be fully integrated.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="image-gallery">
+        <div class="gallery-item">
+          <img src="prototype-4-bridge.jpg" alt="Bridge-style squeegee design">
+          <p>Replace with the bridge-style CAD or printed prototype.</p>
+        </div>
+
+        <div class="gallery-item">
+          <img src="prototype-4-hinge.jpg" alt="Hinge-style squeegee design">
+          <p>Replace with the hinge-style printed prototype.</p>
+        </div>
+      </div>
+
+      <div class="file-links">
+        <a
+          class="button"
+          href="Prototype 4.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View Prototype 4 Presentation
+        </a>
+      </div>
+    </section>
+
+    <!-- PROTOTYPE 5 -->
+
+    <section class="case-section prototype" id="prototype-5">
+      <div class="prototype-header">
+        <div class="prototype-label">Prototype 05</div>
+        <h2>Integrated Final Prototype</h2>
+        <p class="prototype-subtitle">
+          Combining motion, cleaning, water delivery, structure, and controls
+        </p>
+      </div>
+
+      <div class="placeholder">
+        <strong>Fill in: Final integration story</strong>
+        <p>
+          Explain how the gantry, window, tubing, squeegee, electronics, limit switches,
+          and protective housing were brought together into a single system.
+        </p>
+      </div>
+
+      <div class="two-column">
+        <div class="content-box">
+          <h3>Testing Results</h3>
+          <ul>
+            <li>Moved smoothly along the V-slot system.</li>
+            <li>Changed direction reliably using limit-switch control.</li>
+            <li>Delivered enough water to support the cleaning cycle.</li>
+            <li>Moved the squeegee back and forth across the window.</li>
+          </ul>
+        </div>
+
+        <div class="content-box">
+          <h3>Remaining Improvements</h3>
+          <ul>
+            <li>Improve the squeegee-to-window connection.</li>
+            <li>Mount the hose directly to the frame.</li>
+            <li>Strengthen the motor mount to improve belt alignment.</li>
+            <li>Refine the electronics enclosure and water protection.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="image-gallery">
+        <div class="gallery-item">
+          <img src="prototype-5-final.jpg" alt="Final autonomous window cleaning prototype">
+          <p>Replace with a photo of the complete final prototype.</p>
+        </div>
+
+        <div class="gallery-item">
+          <img src="prototype-5-detail.jpg" alt="Final prototype subsystem detail">
+          <p>Replace with a close-up of the squeegee, plumbing, or electronics.</p>
+        </div>
+      </div>
+
+      <div class="file-links">
+        <a
+          class="button"
+          href="Prototype 5.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View Prototype 5 Presentation
+        </a>
+
+        <!-- Optional video button. Rename the video to avoid spaces if possible. -->
+        <a
+          class="button secondary"
+          href="final-prototype-demo.mov"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View Final Prototype Video
+        </a>
+      </div>
+    </section>
+
+    <!-- FINAL PRESENTATION -->
+
+    <section class="case-section">
+      <h2>Final Presentation and Results</h2>
+
+      <p>
+        The final prototype demonstrated a complete automated cleaning cycle using a
+        belt-driven gantry, stepper motor, Arduino control, limit switches, a full-height
+        squeegee, and integrated water delivery.
+      </p>
+
+      <div class="result-grid">
+        <div class="result">
+          <strong>5</strong>
+          <span>Prototype iterations</span>
+        </div>
+
+        <div class="result">
+          <strong>$150</strong>
+          <span>Maximum project budget</span>
+        </div>
+
+        <div class="result">
+          <strong>543 g</strong>
+          <span>Validated cleaning load</span>
+        </div>
+      </div>
+
+      <div class="placeholder">
+        <strong>Fill in: Final measured results</strong>
+        <p>
+          Add cleaning effectiveness, number of passes, friction reduction, weight
+          reduction, final cost, or any other measurable results from the completed
+          system.
+        </p>
+      </div>
+
+      <div class="file-links">
+        <a
+          class="button"
+          href="Final Presentation.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View Final Presentation
+        </a>
+      </div>
+    </section>
+
+    <!-- MY CONTRIBUTIONS -->
 
     <section class="case-section">
       <h2>My Contributions</h2>
+
       <ul>
-        <li>Led planning for later prototype iterations and water delivery integration.</li>
-        <li>Calculated flow requirements, nozzle behavior, and tubing head loss.</li>
-        <li>Helped connect the water delivery system to the gantry and cleaning motion.</li>
-        <li>Supported prototype iteration, design tradeoffs, and final presentation preparation.</li>
+        <li>Led the design and planning of the water-delivery subsystem.</li>
+        <li>Calculated flow requirements, spray behavior, and tubing head loss.</li>
+        <li>Supported integration of the fluid system with the moving gantry.</li>
+        <li>Contributed to prototype planning, design tradeoffs, and system testing.</li>
+        <li>Helped prepare technical documentation and the final project presentation.</li>
       </ul>
+
+      <div class="placeholder">
+        <strong>Fill in: Additional personal contributions</strong>
+        <p>
+          Add any CAD work, fabrication, coding, assembly, testing, presentation,
+          leadership, scheduling, purchasing, or troubleshooting that you personally
+          completed.
+        </p>
+      </div>
     </section>
 
+    <!-- LESSONS -->
+
     <section class="case-section">
-      <h2>What We Learned</h2>
+      <h2>What I Learned</h2>
+
       <p>
-        The project required constant iteration. Parts arrived late, some 3D prints failed, and the final design
-        changed significantly from the original concept. The biggest lesson was learning to plan for failure,
-        make fast engineering decisions, and adapt the design without losing sight of the core function.
+        The project required constant iteration. Components arrived late, several
+        3D-printed parts failed or did not fit, and the final design changed significantly
+        from the original concept.
+      </p>
+
+      <p>
+        The most important lesson was learning to plan for failure, create backup paths,
+        begin rework immediately, and make fast engineering decisions without losing
+        sight of the system's core requirements. The project strengthened my ability to
+        adapt a design under budget, schedule, manufacturing, and integration constraints.
       </p>
     </section>
 
-    <section class="case-section">
-      <h2>Result</h2>
-      <p>
-        The final prototype successfully demonstrated an automated cleaning motion with smooth gantry movement,
-        water delivery, squeegee contact, and reliable direction changes.
-      </p>
+    <!-- NAVIGATION -->
 
-      <a class="button" href="projects.html">← Back to Projects</a>
+    <section class="case-section">
+      <h2>Explore More Work</h2>
+
+      <div class="file-links">
+        <a class="button" href="projects.html">← Back to Projects</a>
+        <a class="button secondary" href="capstone.html">
+          View Spacecraft Camera Housing →
+        </a>
+      </div>
     </section>
   </main>
 
@@ -294,3 +1013,4 @@ Once the motion system was selected, we identified the major engineering challen
   </footer>
 </body>
 </html>
+```
