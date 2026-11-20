@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,10 +9,12 @@
   <link rel="stylesheet" href="styles.css">
 
   <style>
+    /* PAGE HERO */
+
     .page-hero {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 70px 24px 35px;
+      padding: 70px 24px 40px;
       text-align: center;
     }
 
@@ -25,10 +28,10 @@
     }
 
     .page-hero h1 {
-      font-size: clamp(2.6rem, 6vw, 4.5rem);
       color: var(--navy);
-      margin: 0 0 18px;
+      font-size: clamp(2.6rem, 6vw, 4.5rem);
       line-height: 1;
+      margin: 0 0 18px;
     }
 
     .page-hero p {
@@ -36,12 +39,15 @@
       margin: 0 auto;
       color: var(--muted);
       font-size: 1.08rem;
+      line-height: 1.7;
     }
+
+    /* PAGE LAYOUT */
 
     main {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 20px 24px 70px;
+      padding: 10px 24px 70px;
     }
 
     .case-section {
@@ -51,22 +57,216 @@
       padding: 34px;
       margin-bottom: 28px;
       box-shadow: 0 8px 24px rgba(0, 52, 89, 0.07);
+      overflow: hidden;
     }
 
     .case-section h2 {
       color: var(--navy);
-      margin-top: 0;
+      font-size: 1.85rem;
+      margin: 0 0 18px;
+    }
+
+    .case-section h3 {
+      color: var(--navy);
+      margin-top: 28px;
     }
 
     .case-section p,
     .case-section li {
       color: var(--muted);
-      line-height: 1.7;
+      line-height: 1.75;
     }
+
+    .case-section ul {
+      padding-left: 22px;
+    }
+
+    .case-section li {
+      margin-bottom: 10px;
+    }
+
+    /* QUICK FACTS */
+
+    .quick-facts {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .fact {
+      background: #f7fbff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 16px;
+    }
+
+    .fact strong {
+      display: block;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+
+    .fact span {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    /* REQUIREMENTS */
+
+    .requirements-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .requirement {
+      background: #f7fbff;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 20px;
+    }
+
+    .requirement h3 {
+      font-size: 1.05rem;
+      margin: 0 0 8px;
+    }
+
+    .requirement p {
+      margin: 0;
+      font-size: 0.96rem;
+    }
+
+    /* TWO COLUMN CONTENT */
+
+    .two-column {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 22px;
+    }
+
+    .content-box {
+      background: #f7fbff;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 22px;
+    }
+
+    .content-box h3 {
+      margin-top: 0;
+    }
+
+    .content-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* IMAGES */
+
+    .image-block {
+      width: 100%;
+      margin: 28px auto 8px;
+      text-align: center;
+    }
+
+    .image-block img {
+      display: block;
+      width: 100%;
+      max-width: 900px;
+      height: auto;
+      margin: 0 auto;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 8px 20px rgba(0, 52, 89, 0.08);
+      object-fit: contain;
+    }
+
+    .image-caption {
+      max-width: 850px;
+      margin: 12px auto 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-style: italic;
+    }
+
+    .image-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .gallery-item {
+      background: #f7fbff;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 14px;
+    }
+
+    .gallery-item img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 400px;
+      object-fit: contain;
+      border-radius: 12px;
+    }
+
+    .gallery-item p {
+      margin: 10px 4px 2px;
+      font-size: 0.9rem;
+    }
+
+    /* PROJECT LINKS */
+
+    .file-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .file-links .button {
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    /* RESULTS */
+
+    .result-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin: 24px 0;
+    }
+
+    .result {
+      background: #f7fbff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .result strong {
+      display: block;
+      color: var(--navy);
+      font-size: 1.7rem;
+      margin-bottom: 6px;
+    }
+
+    .result span {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    /* TIMELINE */
 
     .timeline {
       display: grid;
-      gap: 20px;
+      gap: 22px;
+      margin-top: 24px;
     }
 
     .timeline-item {
@@ -78,7 +278,46 @@
       display: block;
       color: var(--navy);
       margin-bottom: 6px;
-      font-size: 1.1rem;
+      font-size: 1.05rem;
+    }
+
+    /* TECHNICAL TAGS */
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .tag {
+      background: #edf3f9;
+      color: var(--navy);
+      border-radius: 20px;
+      padding: 8px 14px;
+      font-size: 0.88rem;
+    }
+
+    @media (max-width: 800px) {
+      .quick-facts {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 650px) {
+      .case-section {
+        padding: 24px 20px;
+      }
+
+      .requirements-grid,
+      .two-column,
+      .image-gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .result-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -101,104 +340,1235 @@
     </div>
   </header>
 
+  <!-- ====================================== -->
+  <!-- PROJECT INTRODUCTION -->
+  <!-- ====================================== -->
+
   <section class="page-hero">
-    <div class="eyebrow">Project Case Study</div>
+    <div class="eyebrow">Senior Capstone · Aerospace Engineering</div>
+
     <h1>Spacecraft Camera Housing</h1>
+
     <p>
-      A Northrop Grumman-sponsored senior capstone project focused on designing a protective housing
-      for off-the-shelf cameras used during spacecraft thermal vacuum testing.
+      Design and development of a thermally controlled camera housing for
+      real-time visual monitoring during spacecraft thermal vacuum testing.
+      A year-long engineering project sponsored by Northrop Grumman Innovation Systems.
     </p>
+
+    <div class="quick-facts">
+      <div class="fact">
+        <strong>Organization</strong>
+        <span>Northrop Grumman Innovation Systems</span>
+      </div>
+
+      <div class="fact">
+        <strong>Duration</strong>
+        <span>September 2025 – June 2026</span>
+      </div>
+
+      <div class="fact">
+        <strong>Team</strong>
+        <span>5 engineers</span>
+      </div>
+
+      <div class="fact">
+        <strong>My Role</strong>
+        <span>Team Lead</span>
+      </div>
+    </div>
   </section>
 
   <main>
+
+    <!-- ====================================== -->
+    <!-- PROJECT OVERVIEW -->
+    <!-- ====================================== -->
+
     <section class="case-section">
       <h2>Project Overview</h2>
+
       <p>
-        Thermal chamber testing is used to evaluate spacecraft components under extreme environmental conditions.
-        The goal of this project was to design a camera housing that would allow visual monitoring inside a chamber
-        while protecting commercial camera hardware from temperatures ranging from −180°C to +130°C and vacuum
-        pressures down to 10⁻⁴ torr.
+        Spacecraft components undergo thermal vacuum testing to verify that
+        they can withstand the extreme temperatures and low-pressure
+        environments encountered in space. During these tests, engineers
+        need continuous visual access to monitor deployable structures and
+        identify potential issues.
       </p>
+
+      <p>
+        At Northrop Grumman Innovation Systems, this visibility was limited
+        by two challenges: the thermal chamber's viewing window could become
+        obstructed by frost and condensation, while conventional commercial
+        cameras could not operate directly in the chamber's extreme
+        temperature range.
+      </p>
+
+      <p>
+        Our five-person team was tasked with designing a protective camera
+        housing that could be placed inside the thermal chamber while
+        maintaining the camera within its operating temperature limits.
+        The system also needed to provide a clear optical path, support
+        wired live streaming, and allow the camera to be removed between tests.
+      </p>
+
+      <p>
+        The final design integrated a steel vacuum housing, sapphire viewport,
+        copper-coil heat exchanger, closed-loop water circulation system,
+        electrical feedthroughs, and supporting hardware.
+      </p>
+
+      <!-- ADD: Main SolidWorks rendering of the complete final assembly -->
+      <div class="image-block">
+        <img
+          src="ADD-FINAL-ASSEMBLY-RENDER.png"
+          alt="SolidWorks rendering of the final spacecraft camera housing assembly"
+        >
+
+        <p class="image-caption">
+          Final camera housing assembly showing the enclosure, viewport,
+          supporting hardware, and thermal management system.
+        </p>
+      </div>
     </section>
 
+
+    <!-- ====================================== -->
+    <!-- DESIGN REQUIREMENTS -->
+    <!-- ====================================== -->
+
     <section class="case-section">
-      <h2>Design Process</h2>
+      <h2>Design Requirements</h2>
 
-      <div class="timeline">
-        <div class="timeline-item">
-          <strong>1. Problem Definition</strong>
-          Define the need for reliable visual monitoring during spacecraft component testing without exposing camera
-          hardware directly to extreme thermal vacuum conditions.
+      <p>
+        The sponsor's requirements guided the design of each subsystem.
+        The highest priority was protecting the camera throughout the
+        chamber's thermal cycle while maintaining reliable visual monitoring.
+      </p>
+
+      <div class="requirements-grid">
+
+        <div class="requirement">
+          <h3>Extreme Temperatures</h3>
+          <p>
+            Protect the camera during chamber temperatures ranging from
+            −180°C to +130°C, with a target operating duration of six hours.
+          </p>
         </div>
 
-        <div class="timeline-item">
-          <strong>2. Requirement Development</strong>
-          Translate sponsor needs into engineering requirements, including thermal survivability, vacuum compatibility,
-          manufacturability, camera visibility, and structural integrity.
+        <div class="requirement">
+          <h3>Thermal Regulation</h3>
+          <p>
+            Maintain the camera within its allowable operating temperature
+            through insulation and active heating/cooling.
+          </p>
         </div>
 
-        <div class="timeline-item">
-          <strong>3. Research</strong>
-          Research thermal expansion, vacuum-compatible materials, optical access, sealing methods, and heat transfer
-          considerations for hardware operating in extreme environments.
+        <div class="requirement">
+          <h3>Live Video</h3>
+          <p>
+            Support a minimum 720p resolution, at least 30 frames per second,
+            and no more than two seconds of streaming latency.
+          </p>
         </div>
 
-        <div class="timeline-item">
-          <strong>4. Concept Generation</strong>
-          Develop multiple housing concepts and evaluate tradeoffs related to geometry, manufacturability, thermal
-          behavior, and camera accessibility.
+        <div class="requirement">
+          <h3>Vacuum Compatibility</h3>
+          <p>
+            Reduce internal moisture and prevent condensation or frost
+            from obstructing the camera's optical path.
+          </p>
         </div>
 
-        <div class="timeline-item">
-          <strong>5. CAD and Analysis</strong>
-          Model housing concepts in SolidWorks and use simulation tools to evaluate structural and thermal behavior
-          across expected operating conditions.
+        <div class="requirement">
+          <h3>Mechanical Integration</h3>
+          <p>
+            Provide a stable, fixed camera mount while allowing the camera
+            to be removed and reinstalled between tests.
+          </p>
         </div>
 
-        <div class="timeline-item">
-          <strong>6. Prototype Planning</strong>
-          Prepare a prototype-ready design, identify manufacturing constraints, and plan validation methods for thermal
-          and vacuum performance.
+        <div class="requirement">
+          <h3>Portability</h3>
+          <p>
+            Keep the system below 50 pounds and provide a practical mounting
+            and transport arrangement for chamber installation.
+          </p>
         </div>
 
-        <div class="timeline-item">
-          <strong>7. Testing and Presentation</strong>
-          Validate the design through analysis, prototype testing, and final presentation at the UCSB Capstone Fair.
+      </div>
+
+      <!-- ADD: Original sponsor requirements table or a simplified graphic -->
+      <div class="image-block">
+        <img
+          src="ADD-REQUIREMENTS-TABLE.png"
+          alt="Camera housing target specifications"
+        >
+
+        <p class="image-caption">
+          Summary of sponsor requirements and target specifications.
+        </p>
+      </div>
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- CONCEPT DEVELOPMENT -->
+    <!-- ====================================== -->
+
+    <section class="case-section">
+      <h2>Concept Development</h2>
+
+      <p>
+        Early development focused on finding a practical way to isolate the
+        camera from the chamber environment while maintaining optical access
+        and providing enough thermal control for extended operation.
+      </p>
+
+      <p>
+        The team investigated different housing geometries, camera-loading
+        mechanisms, insulation strategies, and cooling approaches. Initial
+        concepts included passive cooling features and more complicated
+        mechanical interfaces. These were refined as manufacturability,
+        sealing, and thermal performance became clearer.
+      </p>
+
+      <h3>Early Housing Concepts</h3>
+
+      <p>
+        The first housing concept incorporated machined slots and extended
+        internal fins. A 3D-printed model was used to evaluate assembly
+        feasibility and component tolerances. Testing the concept revealed
+        that the loading mechanism required impractically precise tolerances,
+        while the extended fins created an unwanted conductive path between
+        the housing and camera.
+      </p>
+
+      <p>
+        A second concept introduced a nested pipe arrangement and active
+        cooling. However, the proposed fluid-line routing and welded
+        interfaces created challenges for maintaining reliable vacuum seals
+        and achieving the required component alignment.
+      </p>
+
+      <p>
+        The design eventually transitioned to a housing built around
+        prefabricated steel flanged fittings and a rear feedthrough plate.
+        A 3D-printed assembly prototype was used to verify component fit,
+        hole alignment, and access for fastening hardware.
+      </p>
+
+      <!-- ADD: Show the progression from early concept to final housing -->
+      <div class="image-gallery">
+
+        <div class="gallery-item">
+          <img
+            src="ADD-EARLY-HOUSING-CONCEPT.png"
+            alt="Initial camera housing concept"
+          >
+          <p>Initial housing concept with passive cooling features.</p>
+        </div>
+
+        <div class="gallery-item">
+          <img
+            src="ADD-SECOND-HOUSING-CONCEPT.png"
+            alt="Second camera housing concept"
+          >
+          <p>Revised concept incorporating active cooling.</p>
+        </div>
+
+        <div class="gallery-item">
+          <img
+            src="ADD-3D-PRINTED-PROTOTYPE.png"
+            alt="3D printed housing prototype"
+          >
+          <p>3D-printed prototype used to verify assembly and tolerances.</p>
+        </div>
+
+        <div class="gallery-item">
+          <img
+            src="ADD-FINAL-HOUSING-CONCEPT.png"
+            alt="Final camera housing CAD design"
+          >
+          <p>Final housing architecture using prefabricated flanged fittings.</p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- FINAL SYSTEM ARCHITECTURE -->
+    <!-- ====================================== -->
+
+    <section class="case-section">
+      <h2>Final System Architecture</h2>
+
+      <p>
+        The final design was divided into four primary subsystems:
+        the housing, feedthroughs, base, and plumbing/electrical systems.
+        Each subsystem was designed to work together while maintaining
+        the structural and environmental integrity of the complete assembly.
+      </p>
+
+      <h3>Housing & Optical Assembly</h3>
+
+      <p>
+        The outer enclosure was constructed from steel to provide a robust
+        structure capable of withstanding the chamber's thermal environment.
+        A sapphire viewport was incorporated at the front of the housing to
+        provide optical access to the camera. Copper gaskets and bolted
+        flange connections were used to seal the viewport assembly.
+      </p>
+
+      <p>
+        The camera was positioned inside a smaller steel tube surrounded
+        by a copper cooling coil. The nested arrangement provided a
+        dedicated region for the camera while creating an annular space
+        that could be evacuated to reduce heat transfer and internal moisture.
+      </p>
+
+      <!-- ADD: Cross-sectional SolidWorks view of housing and camera position -->
+      <div class="image-block">
+        <img
+          src="ADD-HOUSING-CROSS-SECTION.png"
+          alt="Cross-sectional view of the camera housing"
+        >
+
+        <p class="image-caption">
+          Cross-sectional assembly showing the camera, inner steel tube,
+          copper cooling coil, outer housing, and viewport.
+        </p>
+      </div>
+
+      <h3>Feedthroughs & Rear End Cap</h3>
+
+      <p>
+        The rear end cap provided the interfaces required to connect the
+        internal assembly to external equipment while maintaining a sealed
+        boundary. These interfaces included electrical connections for
+        camera power, video signal, and thermocouples, along with inlet
+        and outlet connections for the cooling loop.
+      </p>
+
+      <p>
+        A separate connection allowed the internal annular space to be
+        evacuated. The rear end cap required careful machining and
+        component placement to accommodate the feedthroughs while
+        maintaining sufficient sealing surfaces and mechanical strength.
+      </p>
+
+      <!-- ADD: Rear end cap CAD render or exploded view -->
+      <div class="image-gallery">
+        <div class="gallery-item">
+          <img
+            src="ADD-REAR-END-CAP.png"
+            alt="Rear end cap CAD design"
+          >
+          <p>Rear end cap and feedthrough layout.</p>
+        </div>
+
+        <div class="gallery-item">
+          <img
+            src="ADD-FEEDTHROUGH-DETAIL.png"
+            alt="Electrical and fluid feedthrough details"
+          >
+          <p>Electrical, vacuum, and fluid feedthrough interfaces.</p>
+        </div>
+      </div>
+
+      <h3>Mounting Base</h3>
+
+      <p>
+        A steel mounting base supported the housing and secured the assembly
+        to strut channels using strut clamps. The arrangement was designed
+        to provide a stable installation inside the chamber while allowing
+        the system to be moved and positioned between tests.
+      </p>
+
+      <!-- ADD: Base assembly CAD or photograph -->
+      <div class="image-block">
+        <img
+          src="ADD-BASE-ASSEMBLY.png"
+          alt="Camera housing mounting base"
+        >
+
+        <p class="image-caption">
+          Mounting base and support arrangement for chamber installation.
+        </p>
+      </div>
+
+      <h3>System Drawings</h3>
+
+      <p>
+        SolidWorks assemblies and engineering drawings were used to define
+        component interfaces, dimensions, and the overall assembly.
+      </p>
+
+      <div class="file-links">
+        <!-- ADD: Link to an approved public-facing assembly drawing PDF -->
+        <a class="button" href="ADD-ASSEMBLY-DRAWING-LINK"
+           target="_blank" rel="noopener noreferrer">
+          View Assembly Drawing
+        </a>
+
+        <!-- ADD: Link to approved subsystem drawings -->
+        <a class="button" href="ADD-SUBASSEMBLY-DRAWING-LINK"
+           target="_blank" rel="noopener noreferrer">
+          View Subassembly Drawings
+        </a>
+      </div>
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- THERMAL MANAGEMENT -->
+    <!-- ====================================== -->
+
+    <section class="case-section">
+      <h2>Thermal Management System</h2>
+
+      <p>
+        Protecting the camera required more than simply enclosing it in a
+        steel housing. The team developed an active thermal management
+        system to circulate temperature-controlled water around the camera
+        assembly and remove heat transferred from the chamber environment.
+      </p>
+
+      <p>
+        The final architecture used a copper coil wrapped around the
+        internal camera tube. Water circulated through the coil as part
+        of a closed-loop system, allowing the camera environment to be
+        regulated independently of the surrounding chamber.
+      </p>
+
+      <h3>Copper Coil Heat Exchanger</h3>
+
+      <p>
+        Copper tubing was selected for the heat exchanger because it could
+        be formed around the inner steel tube and provide a thermal pathway
+        between the camera assembly and circulating coolant.
+      </p>
+
+      <p>
+        Before fabricating the final coil, a prototype was made by manually
+        wrapping soft-tempered copper tubing around a steel rod. This
+        verified that a tight bend radius could be achieved without
+        fracturing the tubing and helped establish the coil geometry
+        required for the final assembly.
+      </p>
+
+      <!-- ADD: Copper coil prototype and final CAD geometry -->
+      <div class="image-gallery">
+        <div class="gallery-item">
+          <img
+            src="ADD-COPPER-COIL-PROTOTYPE.png"
+            alt="Copper tubing coil prototype"
+          >
+          <p>Prototype used to verify copper tubing bend radius.</p>
+        </div>
+
+        <div class="gallery-item">
+          <img
+            src="ADD-COPPER-COIL-FINAL.png"
+            alt="Final copper cooling coil"
+          >
+          <p>Final copper coil geometry around the camera tube.</p>
+        </div>
+      </div>
+
+      <h3>Water Circulation System</h3>
+
+      <p>
+        The cooling system used a pump, reservoir, copper tubing, and
+        temperature-control components to circulate hot or cold water
+        through the housing. Diverting valves directed the coolant through
+        the appropriate path, while additional valves and fittings
+        controlled the flow through the system.
+      </p>
+
+      <p>
+        The plumbing architecture was designed around a target flow rate
+        of 0.5 L/min. The team evaluated the tubing geometry, fittings,
+        and coil configuration to estimate the pressure losses and
+        determine the pump requirements.
+      </p>
+
+      <!-- ADD: Plumbing schematic from the final report -->
+      <div class="image-block">
+        <img
+          src="ADD-PLUMBING-SCHEMATIC.png"
+          alt="Camera housing water circulation plumbing schematic"
+        >
+
+        <p class="image-caption">
+          Plumbing schematic showing the reservoir, pump, valves,
+          housing coil, and coolant flow path.
+        </p>
+      </div>
+
+      <h3>Flow Analysis & Pump Selection</h3>
+
+      <p>
+        Fluid calculations were performed to evaluate the system's
+        hydraulic requirements. The analysis considered flow velocity,
+        Reynolds number, tubing length, friction losses, and minor losses
+        through fittings and connections.
+      </p>
+
+      <p>
+        At the target flow rate of 0.5 L/min, the estimated total head
+        requirement was approximately 1.0–1.1 meters (3.3–3.7 feet).
+        This indicated that the system did not require a high-pressure
+        pump, allowing pump selection to prioritize reliability and
+        compatibility with the operating conditions.
+      </p>
+
+      <p>
+        A low-cost off-the-shelf pump was tested using vinyl tubing and
+        the copper coil. The test confirmed that the pump could deliver
+        the required flow rate and circulate water through the coil
+        without leakage.
+      </p>
+
+      <!-- ADD: Flow calculation screenshot, spreadsheet, or test setup -->
+      <div class="image-gallery">
+        <div class="gallery-item">
+          <img
+            src="ADD-FLOW-ANALYSIS.png"
+            alt="Fluid flow analysis calculations"
+          >
+          <p>Flow velocity and head-loss calculations.</p>
+        </div>
+
+        <div class="gallery-item">
+          <img
+            src="ADD-PUMP-FLOW-TEST.png"
+            alt="Pump and copper coil flow testing"
+          >
+          <p>Experimental pump and copper coil flow test.</p>
+        </div>
+      </div>
+
+      <!-- ADD: Optional approved plumbing calculation document -->
+      <div class="file-links">
+        <a class="button" href="ADD-FLUID-ANALYSIS-LINK"
+           target="_blank" rel="noopener noreferrer">
+          View Fluid Analysis
+        </a>
+      </div>
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- THERMAL ANALYSIS -->
+    <!-- ====================================== -->
+
+    <section class="case-section">
+      <h2>Thermal Analysis & Simulation</h2>
+
+      <p>
+        Thermal analysis was used to evaluate how heat would transfer
+        through the housing during chamber cycling and to estimate the
+        cooling capacity required to protect the camera.
+      </p>
+
+      <h3>Thermal Simulation</h3>
+
+      <p>
+        Preliminary heat-transfer simulations were performed to investigate
+        temperature distribution through the housing and assess whether
+        the camera could remain within its allowable operating range.
+        The COMSOL work provided insight into the thermal response of
+        the structure under the expected chamber conditions.
+      </p>
+
+      <!-- ADD: COMSOL model geometry and boundary conditions -->
+      <div class="image-gallery">
+        <div class="gallery-item">
+          <img
+            src="ADD-COMSOL-GEOMETRY.png"
+            alt="COMSOL camera housing thermal model"
+          >
+          <p>Thermal model geometry and simulation setup.</p>
+        </div>
+
+        <div class="gallery-item">
+          <img
+            src="ADD-COMSOL-TEMPERATURE.png"
+            alt="COMSOL thermal temperature distribution"
+          >
+          <p>Simulated temperature distribution throughout the housing.</p>
+        </div>
+      </div>
+
+      <h3>Thermal Resistance Model</h3>
+
+      <p>
+        Additional heat-transfer calculations modeled the housing as a
+        thermal network consisting of the outer steel housing, inner
+        camera tube, camera, and coolant loop.
+      </p>
+
+      <p>
+        Because the annular region was intended to be evacuated, internal
+        convection was excluded from the model. Heat transfer across
+        this region was evaluated primarily through radiation and solid
+        conduction at the support spacers.
+      </p>
+
+      <p>
+        The analysis considered spacer conduction, radiative heat transfer,
+        conduction through pass-through components, and heat removal
+        through the copper coil. An NTU-based heat exchanger model was
+        used to estimate coolant temperature rise and the required
+        thermal performance of the coil.
+      </p>
+
+      <div class="two-column">
+        <div class="content-box">
+          <h3>Hot Chamber Case</h3>
+          <p>
+            The model estimated approximately 59 W of spacer conduction
+            heat leakage and a required coil performance of approximately
+            4.2 W/K.
+          </p>
+        </div>
+
+        <div class="content-box">
+          <h3>Cold Chamber Case</h3>
+          <p>
+            The model estimated approximately 108 W of spacer conduction
+            heat leakage and a required coil performance of approximately
+            5.9 W/K.
+          </p>
+        </div>
+      </div>
+
+      <p>
+        The analysis indicated that the cooling system required relatively
+        modest heat exchanger performance, with a target coil performance
+        of approximately 6 W/K. Spacer geometry, coil contact quality,
+        surface finish, and conduction through the feedthroughs were
+        identified as important design considerations.
+      </p>
+
+      <!-- ADD: Thermal network diagram, calculation results, or COMSOL plots -->
+      <div class="image-block">
+        <img
+          src="ADD-THERMAL-NETWORK.png"
+          alt="Thermal resistance network for the camera housing"
+        >
+
+        <p class="image-caption">
+          Thermal network representing heat transfer between the outer
+          housing, inner tube, camera, and coolant loop.
+        </p>
+      </div>
+
+      <!-- ADD: More COMSOL or thermal calculation result plots -->
+      <div class="image-gallery">
+        <div class="gallery-item">
+          <img
+            src="ADD-THERMAL-HOT-CASE.png"
+            alt="Thermal analysis hot chamber results"
+          >
+          <p>Thermal analysis under hot chamber conditions.</p>
+        </div>
+
+        <div class="gallery-item">
+          <img
+            src="ADD-THERMAL-COLD-CASE.png"
+            alt="Thermal analysis cold chamber results"
+          >
+          <p>Thermal analysis under cold chamber conditions.</p>
         </div>
       </div>
     </section>
 
-    <section class="case-section">
-      <h2>My Role</h2>
-      <ul>
-        <li>Served as team lead for a five-person engineering team.</li>
-        <li>Coordinated project planning, sponsor communication, and technical deliverables.</li>
-        <li>Supported mechanical design decisions related to housing geometry, thermal constraints, and manufacturability.</li>
-        <li>Worked with Northrop Grumman engineers, UCSB faculty, and teaching staff to align design direction with sponsor requirements.</li>
-      </ul>
-    </section>
+
+    <!-- ====================================== -->
+    <!-- PROTOTYPING -->
+    <!-- ====================================== -->
 
     <section class="case-section">
-      <h2>Engineering Focus Areas</h2>
-      <ul>
-        <li>Thermal design for −180°C to +130°C environments.</li>
-        <li>Vacuum compatibility down to 10⁻⁴ torr.</li>
-        <li>Material selection and thermal expansion considerations.</li>
-        <li>Structural integrity under testing conditions.</li>
-        <li>Camera visibility, mounting, and protection.</li>
-      </ul>
-    </section>
+      <h2>Prototyping & Design Validation</h2>
 
-    <section class="case-section">
-      <h2>Result</h2>
       <p>
-        The project developed a prototype architecture for a protective camera housing intended to support visual
-        monitoring during spacecraft thermal vacuum testing. The work combined aerospace design constraints,
-        mechanical design, thermal-fluid reasoning, CAD, analysis, and sponsor-driven engineering decision-making.
+        Prototyping was used to answer specific engineering questions
+        before committing to the final assembly. Rather than building
+        the complete system immediately, the team tested individual
+        components and interfaces to identify potential problems
+        with fit, manufacturability, and performance.
+      </p>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <strong>01. Housing Assembly Prototype</strong>
+          <p>
+            A 3D-printed housing was used to evaluate assembly feasibility,
+            component alignment, fastener access, and the tolerances
+            between prefabricated steel fittings.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <strong>02. Camera Wiring Investigation</strong>
+          <p>
+            The camera did not include a wiring manual. Its cable was
+            inspected and probed to identify the internal conductors
+            required for power, BNC video transmission, and camera
+            control. The wire dimensions were also checked against
+            the selected electrical feedthrough.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <strong>03. Copper Coil Prototype</strong>
+          <p>
+            Soft-tempered copper tubing was manually formed around a
+            steel rod to verify the required bend radius and evaluate
+            whether the tubing could maintain its shape after forming.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <strong>04. Pump Flow Test</strong>
+          <p>
+            A low-cost pump was tested with vinyl tubing and the copper
+            coil to verify that the required coolant flow rate could
+            be achieved without leakage.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <strong>05. Acrylic Spacer Prototype</strong>
+          <p>
+            An acrylic spacer was laser-cut to evaluate the fit and
+            clearances required for the final steel spacer geometry.
+            The prototype helped verify the interference fit and
+            spacing around the housing.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- ADD: Photographs of the individual prototype tests -->
+      <div class="image-gallery">
+
+        <div class="gallery-item">
+          <img
+            src="ADD-HOUSING-PROTOTYPE.png"
+            alt="3D printed camera housing prototype"
+          >
+          <p>3D-printed housing fit-check prototype.</p>
+        </div>
+
+        <div class="gallery-item">
+          <img
+            src="ADD-CAMERA-WIRING.png"
+            alt="Camera wiring investigation"
+          >
+          <p>Camera cable and feedthrough investigation.</p>
+        </div>
+
+        <div class="gallery-item">
+          <img
+            src="ADD-COIL-PROTOTYPE.png"
+            alt="Copper coil forming prototype"
+          >
+          <p>Copper tubing bend-radius prototype.</p>
+        </div>
+
+        <div class="gallery-item">
+          <img
+            src="ADD-ACRYLIC-SPACER.png"
+            alt="Acrylic spacer prototype"
+          >
+          <p>Acrylic spacer used to verify fit and clearances.</p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- VACUUM / LEAK TESTING -->
+    <!-- ====================================== -->
+
+    <section class="case-section">
+      <h2>Vacuum & Leak Testing</h2>
+
+      <p>
+        One of the primary design objectives was to reduce the moisture
+        inside the housing before exposing it to cryogenic conditions.
+        Lowering the internal humidity helped reduce the likelihood of
+        condensation or frost forming on the camera lens during testing.
+      </p>
+
+      <h3>Testing Procedure</h3>
+
+      <p>
+        The sealing interfaces were prepared using vacuum grease and
+        copper gaskets. The housing bolts were tightened using a
+        calibrated torque wrench to the manufacturer's specified
+        torque of 190 lb-in.
+      </p>
+
+      <p>
+        An industrial vacuum pump was connected to the housing through
+        a pressure gauge and needle valve. The housing was evacuated
+        to a selected pressure, isolated from the pump, and monitored
+        as the internal pressure increased over time.
+      </p>
+
+      <p>
+        The pressure recovery measurements were used to estimate the
+        system's leak rate. Additional ethanol leak testing was performed
+        around suspected sealing interfaces, including threaded fittings,
+        gasket connections, and feedthroughs. However, a single
+        definitive leak location could not be identified.
+      </p>
+
+      <!-- ADD: Actual leak testing photograph -->
+      <div class="image-block">
+        <img
+          src="ADD-LEAK-TEST-SETUP.png"
+          alt="Camera housing vacuum leak testing setup"
+        >
+
+        <p class="image-caption">
+          Vacuum leak testing setup with pressure gauge, needle valve,
+          and vacuum pump connection.
+        </p>
+      </div>
+
+      <h3>Leak Test Results</h3>
+
+      <p>
+        Four trials were conducted to evaluate pressure recovery and
+        estimate the leak rate. The results showed measurable leakage,
+        but the housing could still be evacuated sufficiently to
+        reduce internal relative humidity before cryogenic testing.
+      </p>
+
+      <div class="result-grid">
+        <div class="result">
+          <strong>9.9%</strong>
+          <span>Lowest measured relative humidity</span>
+        </div>
+
+        <div class="result">
+          <strong>4.14</strong>
+          <span>Lowest measured leak rate (Torr/s)</span>
+        </div>
+
+        <div class="result">
+          <strong>4</strong>
+          <span>Leak test trials</span>
+        </div>
+      </div>
+
+      <!-- ADD: Leak test table or pressure-vs-time graph from report -->
+      <div class="image-block">
+        <img
+          src="ADD-LEAK-TEST-DATA.png"
+          alt="Leak test pressure and humidity measurements"
+        >
+
+        <p class="image-caption">
+          Pressure recovery and relative humidity measurements from
+          the four leak testing trials.
+        </p>
+      </div>
+
+      <p>
+        Although the housing did not achieve a perfectly leak-free
+        condition, the reduced internal humidity was sufficient for
+        the project's cryogenic validation objectives. The leak testing
+        also identified sealing performance as an important area
+        for future improvement.
+      </p>
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- CRYOGENIC TESTING -->
+    <!-- ====================================== -->
+
+    <section class="case-section">
+      <h2>Cryogenic Validation Testing</h2>
+
+      <p>
+        The final prototype underwent liquid nitrogen testing to evaluate
+        its ability to withstand extreme low-temperature exposure.
+        The test was designed to assess the mechanical integrity of
+        the housing, performance of the thermal management system,
+        and ability to maintain the camera within its operating limits.
+      </p>
+
+      <h3>Test Setup</h3>
+
+      <p>
+        Before testing, the housing was evacuated to reduce internal
+        moisture. The camera, thermocouples, fluid connections, and
+        sealing components were inspected before the assembled housing
+        was submerged in a liquid nitrogen bath.
+      </p>
+
+      <p>
+        Liquid nitrogen provided an environment at approximately
+        −196°C, colder than the project's specified minimum chamber
+        temperature of −180°C. The housing remained submerged for
+        approximately 30 minutes while temperature measurements
+        were continuously recorded.
+      </p>
+
+      <!-- ADD: Photograph of the pre-test setup -->
+      <div class="image-block">
+        <img
+          src="ADD-CRYOGENIC-PRETEST.png"
+          alt="Camera housing prepared for liquid nitrogen testing"
+        >
+
+        <p class="image-caption">
+          Camera housing and instrumentation prepared for cryogenic testing.
+        </p>
+      </div>
+
+      <!-- ADD: Photograph of actual housing submerged in liquid nitrogen -->
+      <div class="image-block">
+        <img
+          src="ADD-LIQUID-NITROGEN-TEST.png"
+          alt="Camera housing submerged in liquid nitrogen"
+        >
+
+        <p class="image-caption">
+          Final housing submerged in a liquid nitrogen bath during
+          cryogenic validation.
+        </p>
+      </div>
+
+      <h3>Test Results</h3>
+
+      <p>
+        Throughout the approximately 30-minute test, the camera
+        temperature remained within its specified operating limits.
+        No mechanical damage or structural failure was observed
+        during or immediately after cryogenic exposure.
+      </p>
+
+      <p>
+        Following the test, the housing was inspected for condensation
+        and frost. No visible moisture accumulation was observed on
+        the internal camera lens, indicating that the evacuation
+        procedure had successfully reduced internal humidity enough
+        to maintain optical clarity during the test.
+      </p>
+
+      <div class="result-grid">
+        <div class="result">
+          <strong>−196°C</strong>
+          <span>Liquid nitrogen environment</span>
+        </div>
+
+        <div class="result">
+          <strong>30 min</strong>
+          <span>Approximate test duration</span>
+        </div>
+
+        <div class="result">
+          <strong>Within limits</strong>
+          <span>Camera temperature during test</span>
+        </div>
+      </div>
+
+      <!-- ADD: Actual thermocouple temperature plot from the report -->
+      <div class="image-block">
+        <img
+          src="ADD-CRYOGENIC-TEMPERATURE-GRAPH.png"
+          alt="Thermocouple temperature measurements during cryogenic testing"
+        >
+
+        <p class="image-caption">
+          Temperature measurements recorded by the installed T-type
+          thermocouples during liquid nitrogen testing.
+        </p>
+      </div>
+
+      <h3>Post-Test Inspection</h3>
+
+      <p>
+        Although the main housing and camera assembly remained functional,
+        inspection revealed damage to the red elastomeric O-ring used
+        in the BNC cable feedthrough. The outer rubber jacket of the
+        BNC cable also showed signs of degradation, with small fragments
+        flaking from the surface.
+      </p>
+
+      <p>
+        Moisture was observed on the exterior of the BNC feedthrough
+        assembly. This suggested that the cable passthrough could
+        become a potential leakage pathway during repeated cryogenic
+        exposure.
+      </p>
+
+      <p>
+        The findings highlighted the importance of selecting sealing
+        materials and electrical feedthroughs specifically rated
+        for cryogenic conditions.
+      </p>
+
+      <!-- ADD: Post-test component inspection photographs -->
+      <div class="image-gallery">
+        <div class="gallery-item">
+          <img
+            src="ADD-POST-TEST-HOUSING.png"
+            alt="Camera housing after cryogenic testing"
+          >
+          <p>Housing following liquid nitrogen exposure.</p>
+        </div>
+
+        <div class="gallery-item">
+          <img
+            src="ADD-BNC-FEEDTHROUGH-INSPECTION.png"
+            alt="BNC feedthrough after cryogenic testing"
+          >
+          <p>Post-test inspection of the BNC feedthrough and sealing components.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- RESULTS AND LIMITATIONS -->
+    <!-- ====================================== -->
+
+    <section class="case-section">
+      <h2>Final Results & Engineering Limitations</h2>
+
+      <p>
+        The completed prototype demonstrated that a combination of
+        thermal isolation, active coolant circulation, and internal
+        moisture reduction could protect commercial camera hardware
+        during cryogenic exposure.
+      </p>
+
+      <div class="two-column">
+        <div class="content-box">
+          <h3>Validated</h3>
+
+          <ul>
+            <li>Camera remained within its operating temperature limits during liquid nitrogen testing.</li>
+            <li>No visible internal lens condensation or frost was observed after testing.</li>
+            <li>No major structural damage was observed following cryogenic exposure.</li>
+            <li>The cooling pump delivered the target flow rate of 0.5 L/min during the pump test.</li>
+            <li>The housing could be evacuated sufficiently to reduce internal humidity.</li>
+          </ul>
+        </div>
+
+        <div class="content-box">
+          <h3>Limitations & Future Validation</h3>
+
+          <ul>
+            <li>Measurable leakage remained in the housing and required further sealing improvements.</li>
+            <li>The BNC feedthrough O-ring and cable jacket showed damage after cryogenic exposure.</li>
+            <li>A full high-temperature furnace test was not completed.</li>
+            <li>Structural integrity of the modified rear end cap required further evaluation.</li>
+            <li>Longer-duration and repeated thermal-cycle testing would be needed for continued validation.</li>
+          </ul>
+        </div>
+      </div>
+
+      <p>
+        A full furnace test was not completed within the available
+        project schedule and budget. The team prioritized leak testing
+        and cryogenic validation because low-temperature material
+        behavior and seal integrity presented greater uncertainty.
+        Therefore, the liquid nitrogen test provided the primary
+        physical validation of the completed prototype; it should
+        not be interpreted as full qualification across the entire
+        −180°C to +130°C operating range.
+      </p>
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- MY CONTRIBUTIONS -->
+    <!-- ====================================== -->
+
+    <section class="case-section">
+      <h2>My Contributions</h2>
+
+      <p>
+        I served as team lead for the five-person capstone team,
+        coordinating the year-long development process while
+        contributing to the mechanical design, analysis, and
+        testing of the camera housing system.
+      </p>
+
+      <h3>Project Leadership</h3>
+
+      <ul>
+        <li>Led weekly team meetings and coordinated project tasks, milestones, and deliverables.</li>
+        <li>Organized design reviews and prototype demonstrations with Northrop Grumman engineers, UCSB faculty, and teaching staff.</li>
+        <li>Coordinated communication between the team, sponsor, and academic advisors.</li>
+        <li>Helped translate sponsor feedback and engineering requirements into design priorities.</li>
+      </ul>
+
+      <h3>Mechanical Design & Analysis</h3>
+
+      <ul>
+        <li>Contributed to the SolidWorks development of the camera housing and supporting assemblies.</li>
+        <li>Worked on thermal and structural simulation using COMSOL Multiphysics.</li>
+        <li>Evaluated mechanical design constraints related to temperature, vacuum, component interfaces, and manufacturability.</li>
+        <li>Contributed to the development and refinement of the thermal management and fluid circulation system.</li>
+      </ul>
+
+      <h3>Prototyping & Testing</h3>
+
+      <ul>
+        <li>Participated in prototype development and evaluation of housing components and system interfaces.</li>
+        <li>Worked on nitrogen and vacuum testing of the assembled camera housing.</li>
+        <li>Contributed to experimental flow and temperature testing of the water circulation system.</li>
+        <li>Helped evaluate test observations and identify improvements for future iterations.</li>
+      </ul>
+
+      <!-- ADD: Photos of yourself working on CAD, testing, or leading a design review -->
+      <div class="image-gallery">
+        <div class="gallery-item">
+          <img
+            src="ADD-MECHANICAL-DESIGN-PHOTO.png"
+            alt="Mechanical design work"
+          >
+          <p>Mechanical design and CAD development.</p>
+        </div>
+
+        <div class="gallery-item">
+          <img
+            src="ADD-TESTING-PHOTO.png"
+            alt="Camera housing testing"
+          >
+          <p>Prototype testing and system validation.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- FINAL TAKEAWAYS -->
+    <!-- ====================================== -->
+
+    <section class="case-section">
+      <h2>What I Learned</h2>
+
+      <p>
+        This project gave me experience developing a complex mechanical
+        system from initial requirements through design, analysis,
+        fabrication, and experimental testing. It required balancing
+        thermal performance, mechanical constraints, component
+        availability, manufacturability, and budget.
+      </p>
+
+      <p>
+        One of the most valuable parts of the project was learning how
+        to use testing to identify weaknesses that were not immediately
+        apparent in the design. The post-test damage to the BNC
+        feedthrough, for example, demonstrated how small component-level
+        decisions can affect the reliability of an otherwise functional
+        system.
+      </p>
+
+      <p>
+        Leading the project also strengthened my ability to coordinate
+        technical work across a team, communicate design decisions,
+        and move a long-term engineering project toward a final
+        deliverable.
+      </p>
+
+      <h3>Technical Skills & Tools</h3>
+
+      <div class="tag-list">
+        <span class="tag">SolidWorks</span>
+        <span class="tag">COMSOL Multiphysics</span>
+        <span class="tag">Mechanical Design</span>
+        <span class="tag">Thermal Analysis</span>
+        <span class="tag">Fluid Mechanics</span>
+        <span class="tag">Heat Transfer</span>
+        <span class="tag">FEA</span>
+        <span class="tag">Vacuum Systems</span>
+        <span class="tag">Thermal Management</span>
+        <span class="tag">Prototyping</span>
+        <span class="tag">Hardware Integration</span>
+        <span class="tag">Experimental Testing</span>
+        <span class="tag">Team Leadership</span>
+      </div>
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- PROJECT DOCUMENTATION -->
+    <!-- ====================================== -->
+
+    <section class="case-section">
+      <h2>Project Documentation</h2>
+
+      <p>
+        Additional project documentation is available below.
+        These materials provide further detail on the engineering
+        design, system architecture, and development process.
+      </p>
+
+      <div class="file-links">
+
+        <!-- Only link documents approved for public distribution. -->
+
+        <a
+          class="button"
+          href="ADD-FINAL-POSTER-LINK"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View Project Poster
+        </a>
+
+        <a
+          class="button"
+          href="ADD-FINAL-PRESENTATION-LINK"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View Final Presentation
+        </a>
+
+        <a
+          class="button"
+          href="ADD-APPROVED-REPORT-LINK"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View Technical Report
+        </a>
+
+      </div>
+    </section>
+
+
+    <!-- ====================================== -->
+    <!-- BACK TO PROJECTS -->
+    <!-- ====================================== -->
+
+    <section class="case-section">
+      <h2>Explore More Projects</h2>
+
+      <p>
+        Interested in other mechanical design, robotics, and
+        renewable energy projects? Explore more of my engineering work.
       </p>
 
       <a class="button" href="projects.html">← Back to Projects</a>
     </section>
+
   </main>
 
   <footer>
